@@ -17,10 +17,15 @@ function getWeather(city, citySearchList) {
         var tempF = (response.main.temp - 273.15) * 1.8 + 32;
         tempF = Math.floor(tempF);
         var cityName = $("#city-name").text(response.name);
+
         var windSpeed = $("#wind-speed").text("Wind Speed: " + response.wind.speed);
+
         var cityDate = $("<h4>").addClass("city-name").text(date.toLocaleDateString('en-US'));
+
         var humidity = $("#humidity").text("Humidity: " + response.main.humidity);
-        var image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
+
+        var image = $("<img>").attr(response.weather[0] + ".png")
+
         var lat = response.coord.lat;
         var lon = response.coord.lon;
         var UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
