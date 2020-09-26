@@ -1,0 +1,10 @@
+
+* body {
+    background-color: rgb(125, 175, 233);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+ .cityName {
+background-color: yellow;
+ }

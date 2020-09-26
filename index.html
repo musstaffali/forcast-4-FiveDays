@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span id="header" class="navbar-brand mb-0 h w-10 text-center">Weather Forcast</span>
+    </nav>
+
+    <div class="row">
+      <div class=col-2>
+    </div>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 bg-dark">
+                <p class="search-header my-1"></p>
+                <div class="input-group mb-5">
+                    <input id="searchTerm" type="text" class="form-control" placeholder="Search location"
+                        aria-label="Search location">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul id="history" class="list-group"></ul>
+            </div>
+            <div class="col-4">
+                <div class="row mr-0">
+                    <div class="col-12 border border-dark m-3 rounded">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 id="city-name" class="city-name city align-middle"></h2>
+                            </div>
+                        </div>
+                        <div class="row city">
+                          <div class="col-12">
+                              <p id="humidity"></p>
+                          </div>
+                      </div>
+                        <div class="row city">
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <div class="row city">
+                            <div class="col-12">
+                                <p id="wind-speed"></p>
+                            </div>
+                        </div>
+                        <div class="row city">
+                            <div class="col-12 d-flex">
+                                <p id="UV-index"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="forecast" class="forecast-cards row"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+</body>
+</html>
